@@ -14,8 +14,14 @@
     {% for product in products%}
     </h1>{{product.id}}</h1>
     <h4>{{product.name}}</h4>
+     <img height="100" src="{{product.img}}" alt="">
 
-    <img height="100" src="{{ product.img }}" alt=""/>
-    {% endfor %}
+     <button>
+        <a href="{% url 'details' id=product.id%}">/view more</a>
+     </button>
+
+    {% end for %}
+
+
 </body>
 </html>
